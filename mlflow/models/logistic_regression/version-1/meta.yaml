@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1701627637902
+current_stage: None
+description: null
+last_updated_timestamp: 1701627637902
+name: logistic_regression
+run_id: 747e9ee185ff4ab1b27df32c9fc84098
+run_link: null
+source: /Users/Aya/Tech-Job-profile-prediction-dsProject/notebooks/../mlflow/826012750732074976/747e9ee185ff4ab1b27df32c9fc84098/artifacts/model
+status: READY
+status_message: null
+storage_location: /Users/Aya/Tech-Job-profile-prediction-dsProject/notebooks/../mlflow/826012750732074976/747e9ee185ff4ab1b27df32c9fc84098/artifacts/model
+user_id: null
+version: 1

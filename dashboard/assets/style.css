@@ -1,0 +1,166 @@
+body {
+    /*background-image: url("galaxy.gif");*/
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    background-color: #272525;
+}
+
+.header {
+    height: 288px;
+    padding: 16px 0 0 0;
+}
+
+.header-emoji {
+    font-size: 48px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-title {
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header-description {
+    color: #CFCFCF;
+    margin: 4px auto;
+    text-align: center;
+    max-width: 384px;
+}
+
+.footer {
+    background-color: #b6b6b6;
+    display: flex; 
+    justify-content: center;
+    border-radius: 4px;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+
+
+}
+.skill-title{
+    display: flex;
+    padding-left: 12px;
+    color: #111010;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.skill-group{
+    padding-right: 50%;
+    display: flex;
+    color: #ca1515;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+.checklist_control{
+    padding: 8px;
+    background-color: rgb(234, 240, 242);
+    font-family: 'Segoe UI';
+    font-size: 21px;
+    color: #1e1c1c;
+    border-radius: 4px;
+    
+
+}
+.checklist_control input{
+    background-color: rgb(188, 23, 23);
+    color: rgb(234, 240, 242);
+    margin-left: 30px;
+    margin-right: 15px; 
+    font-size: 2px;
+}
+
+.checklist_control input[type=checkbox] {
+    transform: scale(1.5);
+    margin: 5px;
+    cursor: pointer;
+  }
+
+.checklist_control label{
+    padding: 8px;
+    background-color: rgb(234, 240, 242);
+    font-size: 21px;
+    
+    
+}
+
+.accordion-item{
+    width: 50%;
+    margin: auto;
+    background-color:rgb(58, 11, 18);
+    font-family: Courier;
+    font-size: 38px;
+    border-radius: 5px;
+    padding: 3px;
+    text-align: center;
+    --bs-accordion-btn-color: rgb(223, 223, 227);
+	--bs-accordion-btn-bg: rgb(41, 40, 40);
+	--bs-accordion-active-color: rgb(230, 232, 226);
+    --bs-accordion-active-bg: rgb(124, 119, 119);
+
+}
+
+
+.accordion-item:hover{
+    color: #121111;
+    cursor: pointer;
+}
+  
+.accordion{
+    margin: auto;
+    font-family: Courier;
+    font-size: 38px;
+    color: #d33457;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+
+.Button{
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ 
+        float: center;
+        background-color: #4CAF50; 
+        border: none;
+        color: rgb(248, 242, 242);
+        padding: 18px 18px;
+        text-align: center;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: 21px;
+        font-weight: bold;
+        transition-duration: 0.3s;
+        margin-left: 50%;
+}
+
+.Button:hover {
+    background-color: #2f2e2e; 
+    color: white;
+  }
+
+  .dropdown{
+    width: 450px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+.recommndation-sector{
+    display: flex;
+    justify-content:safe center;
+    border-radius: 4px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

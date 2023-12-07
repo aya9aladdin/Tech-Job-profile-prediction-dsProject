@@ -1,0 +1,15 @@
+artifact_uri: /Users/Aya/Tech-Job-profile-prediction-dsProject/notebooks/../mlflow/826012750732074976/747e9ee185ff4ab1b27df32c9fc84098/artifacts
+end_time: 1701627637906
+entry_point_name: ''
+experiment_id: '826012750732074976'
+lifecycle_stage: active
+run_id: 747e9ee185ff4ab1b27df32c9fc84098
+run_name: logistic_regression
+run_uuid: 747e9ee185ff4ab1b27df32c9fc84098
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1701627635773
+status: 3
+tags: []
+user_id: xxx

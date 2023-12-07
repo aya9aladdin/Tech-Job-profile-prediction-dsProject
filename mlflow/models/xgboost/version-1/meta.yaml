@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1701628238319
+current_stage: None
+description: null
+last_updated_timestamp: 1701628238319
+name: xgboost
+run_id: ddebc86a84f44d66b3e4e2d43cec1fbc
+run_link: null
+source: /Users/Aya/Tech-Job-profile-prediction-dsProject/notebooks/../mlflow/826012750732074976/ddebc86a84f44d66b3e4e2d43cec1fbc/artifacts/model
+status: READY
+status_message: null
+storage_location: /Users/Aya/Tech-Job-profile-prediction-dsProject/notebooks/../mlflow/826012750732074976/ddebc86a84f44d66b3e4e2d43cec1fbc/artifacts/model
+user_id: null
+version: 1

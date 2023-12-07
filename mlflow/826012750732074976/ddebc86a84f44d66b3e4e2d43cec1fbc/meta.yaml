@@ -1,0 +1,15 @@
+artifact_uri: /Users/Aya/Tech-Job-profile-prediction-dsProject/notebooks/../mlflow/826012750732074976/ddebc86a84f44d66b3e4e2d43cec1fbc/artifacts
+end_time: 1701628238326
+entry_point_name: ''
+experiment_id: '826012750732074976'
+lifecycle_stage: active
+run_id: ddebc86a84f44d66b3e4e2d43cec1fbc
+run_name: xgboost
+run_uuid: ddebc86a84f44d66b3e4e2d43cec1fbc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1701628236398
+status: 3
+tags: []
+user_id: xxx
