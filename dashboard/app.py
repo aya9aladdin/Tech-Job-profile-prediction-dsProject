@@ -53,9 +53,9 @@ def generate_skills_checklist():
         check_list.append(group)
 
     return html.Div(
-    dbc.Accordion(children=check_list, className="accordion", id = "skills-selector"))
+    dbc.Accordion(children=check_list, className="accordion-container"))
 
-def generate_footer():
+def generate_skills_summary():
     selected_skills  = []
     for skill_type in level_0_columns:
         summary =html.Div(
@@ -63,8 +63,7 @@ def generate_footer():
                 html.P(children=f"Selected {skill_type}: ", className="skill-title"),
                 html.P(
                     children=(
-                        f"selected {skill_type} {skill_type} "
-                    ),
+                        "No skills selected"),
                     className="skill-group",
                 id=f"{skill_type}-skills-summary"),
             ],
@@ -73,7 +72,7 @@ def generate_footer():
         
         selected_skills.append(summary)
 
-    return html.Div(className="footer",
+    return html.Div(className="skills-container",
 
      children=selected_skills)
 
@@ -97,7 +96,7 @@ header = html.Div(
 prediction_button = html.Div(
 
              [
-                    html.Button('Predict Price',
+                    html.Button('Predict Jobs',
                                 id='predict-button',
                                 n_clicks=None,
                                 className='Button'),
@@ -106,7 +105,7 @@ prediction_button = html.Div(
 )
 
 recommendation_button = html.Div(
-                     html.Button('recommend skills',
+                     html.Button('Recommend Skills',
                                 id='recommend-button',
                                 n_clicks=None,
                                 className='Button'),)
@@ -116,10 +115,12 @@ all_jobs = requests.get(API_URL+GET_JOBS).json()
 app.layout = html.Div(
     children=[header, 
     html.Div(children=generate_skills_checklist(), id="checklist-input",),
-    html.Div(children=[generate_footer(), prediction_button]),
-    dbc.Spinner(color="primary", children=html.Div(children=[], id="job-section")),
+    html.Div(children=[generate_skills_summary()]),
        #start of dropdown
-    html.Div(className="recommndation-sector", children=[
+    html.Div(className="buttons-container", children=[
+        prediction_button,
+        html.Br(),
+        html.P("     or    Select a job to get skills recommendations:", style={'font-weight': 'bold'}),
         dcc.Dropdown(id="job-selector",
                             options = [
                                 {
@@ -129,9 +130,13 @@ app.layout = html.Div(
                                             for job in all_jobs['jobs']
                                      ],
                             clearable=True,
+                            placeholder="Select a job",
                             className="dropdown",
                         ),
                         recommendation_button], ),#end of dropdown
+
+    dbc.Spinner(color="primary", children=html.Div(children=[], id="job-section")),
+
     dbc.Spinner(color="primary", children=html.Div(children=[], id="skill-recommender")),
 
  
@@ -145,7 +150,8 @@ for skill_type in level_0_columns:
     )
     def skills_summary(skills):
         try:
-            return f"{' / '.join(skills)}"
+            return html.Ul([html.Li(skill) for skill in skills])
+
         except:
             return "No skills selected"
     
@@ -185,7 +191,7 @@ def predict_job(n_clicks, lang, db, platforms, webframeworks, mistech, dev_tools
                             )
             fig = go.Figure(data=[trace], layout=layout)
 
-            return dcc.Graph(figure=fig,)
+            return dcc.Graph(figure=fig, style={'margin-top: ':'90px', 'margin-bottom': '50px'})
         else:
             return html.P(children="Error in the API call", style={'color': 'red'})
     return dash.no_update
@@ -222,7 +228,8 @@ def recommend_skill(n_clicks, lang, db, platforms, webframeworks, mistech, dev_t
             trace = go.Bar(
                 x=reversed_values,
                 y=reversed_keys,
-                orientation='h'
+                orientation='h',
+                marker=dict(color='rgb(49,130,189)')
             )
             layout = go.Layout(
                                 title='Most recommended skills',
@@ -231,7 +238,7 @@ def recommend_skill(n_clicks, lang, db, platforms, webframeworks, mistech, dev_t
                             )
             fig = go.Figure(data=[trace], layout=layout)
 
-            return dcc.Graph(figure=fig,)
+            return dcc.Graph(figure=fig, style={'margin-bottom': '50px',})
         else:
             return html.P(children="Error in the API call", style={'color': 'red'})
     return dash.no_update
