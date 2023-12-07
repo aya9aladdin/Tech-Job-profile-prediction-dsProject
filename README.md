@@ -1,4 +1,4 @@
-learningRoadmaps-dsProject
+Tech Job prediction 
 ==============================
 
 An end to end data science project for prediciting the required courses and skills to take for a specific learning path
@@ -55,3 +55,8 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+
+
+## this project is still under development
+
