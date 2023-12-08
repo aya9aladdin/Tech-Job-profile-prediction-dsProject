@@ -37,11 +37,11 @@ class JobPrediction:
 
     def get_all_jobs(self):
         return self.data['targets_names']
+    
 
     # ========================================================
     # **************    Prediction Functions    **************  
     # ========================================================
-
     
     
     def predict_jobs_probabilities(self, available_skills):
@@ -63,21 +63,23 @@ class JobPrediction:
         return target.iloc[0].sort_values(ascending=False).to_json()
 
 
-
-
     # ========================================================
     # **************    Simulation Functions    **************
     # ========================================================
 
     def recommend_new_skills(self, available_skills, target_job, threshold=0):
         # Calculate base probability
+      
+        if any(skill not in self.data['features_names'] for skill in available_skills) or len(available_skills) == 0:
+            raise ValueError(f"invalid skill name: {available_skills}")
+        
+        if target_job not in self.data['targets_names']:
+            raise ValueError(f"invalid job name: {target_job}")
+        
         features = pd.DataFrame(data=np.zeros((1, len(self.data['features_names']))), columns=self.data['features_names'],
                                 dtype=int)
 
         target = pd.DataFrame(data=np.zeros((1, len(self.data['targets_names']))), columns=self.data['targets_names'], dtype=int)
-        
-        if any(skill not in self.data['features_names'] for skill in available_skills) or len(available_skills) == 0:
-            raise ValueError(f"invalid skill name: {available_skills}")
         
         features[available_skills] = 1
 

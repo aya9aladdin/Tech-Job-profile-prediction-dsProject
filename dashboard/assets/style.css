@@ -96,14 +96,13 @@ body {
     justify-content: space-around;
     display: flex;
     border-radius: 10px;
-    width: auto;
     border-color: #040404;
     display: flex;
     padding-left: 15px;
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
-    width: 120%;
+    width: 110%;
     height: 20%;
     padding-inline: auto;
     padding-top: 10px;
@@ -114,7 +113,7 @@ body {
     border-radius: 10px;
     border-radius: 5px;
     color: #ffffff;
-    width: 110%;
+    width: 100%;
     font-size: 18px;
     font-weight: bold;
     border: 2px solid #fcfcfc30;
@@ -128,7 +127,7 @@ body {
     padding-top: 2%;
     border: 2px solid #fcfcfc6f;
     border-radius: 7px;
-    width: 90%;
+    width: 95%;
     min-height: 300px;
     height: auto;
     margin-inline: auto;
