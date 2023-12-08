@@ -1,7 +1,7 @@
 Tech Job prediction 
 ==============================
 
-An end-to-end data science project for predicting the required skills needed for a specific tech job and jobs that best fit your current skills
+An end-to-end data science project for predicting the required skills needed for a specific tech job and jobs that best fit your current skills.
 
 Project Organization
 ------------
@@ -34,9 +34,8 @@ Project Organization
 
 --------
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
 
+## Motivation
 
-
-## this project is still under development
+This project aims to simplify career decisions in the tech industry by creating a user-friendly platform that predicts the essential skills for specific jobs plus  recommending jobs based on an individual's current skill set. Using supervised classification and machine learning, the system will analyze job descriptions to provide accurate skill predictions and offer personalized job matches.
 
