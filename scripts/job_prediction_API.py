@@ -14,7 +14,7 @@ from datetime import datetime
 import pandas as pd
 
 MLFLOW_TRACKING_URI = "../mlflow"
-MLFLOW_RUN_ID = "37cac0d546294bf0af484399c4f22d22"
+MLFLOW_RUN_ID = "7396a38eb17e42898bc5586415caf600"
 
 
 # Initiate API and JobPrediction object

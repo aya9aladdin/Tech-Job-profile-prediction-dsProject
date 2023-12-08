@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import pickle
 from mlflow.tracking import MlflowClient
-from matplotlib import pyplot as plt
 import json
 
 LOG_DATA_PKL    =  "/data/data_details"
