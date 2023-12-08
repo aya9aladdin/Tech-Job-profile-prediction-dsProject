@@ -89,11 +89,16 @@ First I used linear regression as a base model to compare other models to it
 Why recall score?
 Because it was more important for me the percentage of detecting the job right than having false positive results.
 
-Xgboost and Random Forest gave nearly equal performance but I chose Xgboost as it is smaller in size compared to Random forest, which was around 9GB of size.
+Xgboost and Random Forest gave nearly equal performance but I chose Xgboost as it is smaller in size compared to Random Forest, which was around 9GB of size.
 
 
 ## Limitations and what can be improved
 - Hyperparameter tuning with grid search or random search.
 - More feature engineering and statistical analysis.
 
-  
+## Explore the notebook
+To explore the notebook (here)[https://github.com/aya9aladdin/used-cars-price-prediction/tree/main/notebooks]
+
+## APP Demo
+
+
