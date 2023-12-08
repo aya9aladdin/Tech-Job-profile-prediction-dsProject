@@ -36,13 +36,18 @@ Project Organization
 
 
 ## Motivation
-
 This project aims to simplify career decisions in the tech industry by creating a user-friendly platform that predicts the essential skills for specific jobs plus  recommending jobs based on an individual's current skill set. The system will analyze job descriptions using supervised classification and machine learning to provide accurate skill predictions and offer personalized job matches.
 
 ## Data Source
-
 The data source for this project was the [Stack overflow developers survey](https://survey.stackoverflow.co/2023/). This survey contains over
 80K responses from people working in different tech jobs with corresponding skills in different tech areas. 
+
+## Technologies and methodology:
+    Model: Xgboost classifier
+    Machine learning lifecycle organization: MLflow
+    API development: Apache Flask
+    Web app development: Dash Plotly
+
 
 ## Analytics at a glance
 
@@ -60,3 +65,35 @@ The data source for this project was the [Stack overflow developers survey](http
 
 ### Jobs correlation between each other
 ![image](https://github.com/aya9aladdin/Tech-Job-profile-prediction-dsProject/assets/27581535/b0cfcc89-f7fe-440a-ae13-8e9f92be619b)
+
+
+
+## Data Engineering
+- Full stack and back-end developer classes represented the majority of the responses, in addition to having the potential to include sub-profiles
+  (eg. backend can be a Java developer or C++ developer etc.). I decided to cluster them and extract useful sub-profiles from them to increase the specificity
+  of job profiles, for this task, I used DBscan because it can deal with clusters of arbitrary shapes and densities.
+- I merged scientist and researcher classes as they represent more or less the same job profile
+
+
+## Model development
+
+First I used linear regression as a base model to compare other models to it 
+
+| Model     	                | Recall score 	    |
+|-------------------	        |------------------	|
+| Linear regression          	| 37% 	            |
+| Random forest     	        | 82% 	            |
+| Xgboost               	    | 82% 	            |
+
+
+Why recall score?
+Because it was more important for me the percentage of detecting the job right than having false positive results.
+
+Xgboost and Random Forest gave nearly equal performance but I chose Xgboost as it is smaller in size compared to Random forest, which was around 9GB of size.
+
+
+## Limitations and what can be improved
+- Hyperparameter tuning with grid search or random search.
+- More feature engineering and statistical analysis.
+
+  
