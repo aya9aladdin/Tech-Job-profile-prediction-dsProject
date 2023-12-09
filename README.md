@@ -68,7 +68,7 @@ The data source for this project was the [Stack overflow developers survey](http
 
 
 
-## Data Engineering
+## Features Engineering
 - Full stack and back-end developer classes represented the majority of the responses, in addition to having the potential to include sub-profiles
   (eg. backend can be a Java developer or C++ developer etc.). I decided to cluster them and extract useful sub-profiles from them to increase the specificity
   of job profiles, for this task, I used DBscan because it can deal with clusters of arbitrary shapes and densities.
