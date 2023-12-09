@@ -18,7 +18,7 @@ GET_JOBS = 'get_jobs'
 DATA_PATH = '../data/processed/data_engineered_df.pkl'
 
 df = pd.read_pickle(DATA_PATH)
-level_0_columns = [column for column in df.columns.levels[0] if column not in ['DevType']]
+level_0_columns = [column for column in df.columns.levels[0] if column not in ['DevType', 'Country']]
 
 
 external_stylesheets = [
