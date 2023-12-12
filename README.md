@@ -97,7 +97,7 @@ Xgboost and Random Forest gave nearly equal performance but I chose Xgboost as i
 - More feature engineering and statistical analysis.
 
 ## Explore the notebook
-To explore the notebook (here)[https://github.com/aya9aladdin/used-cars-price-prediction/tree/main/notebooks]
+To explore the notebook [here](https://github.com/aya9aladdin/used-cars-price-prediction/tree/main/notebooks)
 
 ## APP Demo
 
