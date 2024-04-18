@@ -1,4 +1,4 @@
-mlflow==2.9.2
+mlflow==2.10.0
 cloudpickle==2.2.1
 numpy==1.23.5
 packaging==23.1
